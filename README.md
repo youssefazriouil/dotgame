@@ -14,13 +14,14 @@ The goal of this exercise is to create a game. In the game, dots move from the t
 - You must write at least the CSS necessary to achieve the basic layout of the game; you may also write additional CSS to improve the design of the game. 
 - The project is set up to use Sass, but you may also author plain CSS, or add a different CSS preprocessor.
 - Your finished code should be of a quality that you would submit to your peers for a code review. 
-- If you have questions, respond to the original email; your questions will be passed on and answered within one business day. 
-- When you are ready to share your work, respond to the original email; please include a link to this page, and the approximate amount of time you spent on the exercise.
+- If you have questions, respond to the original email where the exercise was shared with you; your questions will be answered within one business day. 
+- When you are ready to share your work, respond to the original email; please include a link to this page, _and the approximate amount of time you spent on the exercise_.
 
 ## Building the Game
 
 - The game starts when the page loads. 
 - When the game starts, a dot appears at a random horizontal position at the top of a playing area, and starts to move vertically toward the bottom of the playing area.
+- Dots should never "hang" off the left or right edge of the screen. 
 - Each dot should be at least 10px in diameter and no more than 100px in diameter; the size should vary for each new dot.
 - A dot falls at a constant rate. A player should be able to use a slider to control the rate at which dots fall, with a range of 10-100 pixels of vertical movement per second.
 - When a player touches or clicks a dot, the dot should disappear from the box, and the score should be increased based on the dot's value. 
