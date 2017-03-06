@@ -2,7 +2,7 @@
 
 The goal of this exercise is to create a game. In the game, dots move from the top to the bottom of the screen. A player tries to click on the dots, and receives points when they are successful.
 
-![mockup](https://cdn.gomix.com/84ca8f35-cd1c-4d74-ad6f-f1f108b5b85a%2Fdot-game-with-banner.png)
+![mockup](https://cdn.gomix.com/5637e272-75b8-4d60-af04-8b0adc1b8093%2Fscreening-mockup.png)
 
 
 ## Guidelines for Completing the Exercise
@@ -13,16 +13,18 @@ The goal of this exercise is to create a game. In the game, dots move from the t
 - You should not use a JavaScript library.
 - You must write at least the CSS necessary to achieve the basic layout of the game; you may also write additional CSS to improve the design of the game. 
 - The project is set up to use Sass, but you may also author plain CSS, or add a different CSS preprocessor.
-- Your finished code should be of a quality that you would submit to your peers for a code review.
+- Your finished code should be of a quality that you would submit to your peers for a code review. 
+- If you have questions, respond to the original email; your questions will be passed on and answered within one business day. 
+- When you are ready to share your work, respond to the original email; please include a link to this page, and the approximate amount of time you spent on the exercise.
 
 ## Building the Game
 
-- The game starts when a player touches or clicks the Start button; at that point, the Start button changes to a Pause button, which should pause the game until the button is touched or clicked again.
-- Dots fall at a constant rate. A player should be able to use a slider to control the rate at which dots fall, with a range of 10-100 pixels per second.
-- A new dot appears at a random horizontal position at the top of the box every second. A dot should not "hang" off the left or right edge of the screen.
-- Dots should vary randomly in size from 10px in diameter to 100px in diameter.
-- A dot's value is inversely proportional to its size, with the smallest dots worth 10 points, and the largest dots worth 1 point.
+- The game starts when the page loads. 
+- When the game starts, a dot appears at a random horizontal position at the top of a playing area, and starts to move vertically toward the bottom of the playing area.
+- Each dot should be at least 10px in diameter and no more than 100px in diameter; the size should vary for each new dot.
+- A dot falls at a constant rate. A player should be able to use a slider to control the rate at which dots fall, with a range of 10-100 pixels of vertical movement per second.
 - When a player touches or clicks a dot, the dot should disappear from the box, and the score should be increased based on the dot's value. 
+- A new dot appears at a random horizontal position at the top of the playing area 100ms after the previous dot disappears, either because the previous dot moved off the playing area, or because a player clicked on it and it disappeared.
 
 You can view your running application by clicking the "Show" link in the upper left-hand corner of the page. 
 
