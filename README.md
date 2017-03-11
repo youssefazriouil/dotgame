@@ -24,8 +24,8 @@ The goal of this exercise is to create a game. In the game, dots move from the t
 - Dots should never "hang" off the left or right edge of the screen. 
 - Each dot should be at least 10px in diameter and no more than 100px in diameter; the size should vary for each new dot.
 - A dot falls at a constant rate. A player should be able to use a slider to control the rate at which dots fall, with a range of 10-100 pixels of vertical movement per second.
-- When a player touches or clicks a dot, the dot should disappear from the box, and the score should be increased based on the dot's value. 
-- A new dot appears at a random horizontal position at the top of the playing area 100ms after the previous dot disappears, either because the previous dot moved off the playing area, or because a player clicked on it and it disappeared.
+- When a player touches or clicks a dot, the dot should disappear from the box, and a new dot should appear at a random horizontal position at the top of the playing area 100ms later. 
+- A new dot should also appear at a random horizontal position at the top of the playing area every 1000ms.
 
 You can view your running application by clicking the "Show" link in the upper left-hand corner of the page. 
 
