@@ -2,7 +2,7 @@
 
 The goal of this exercise is to create a game. In the game, dots move from the top to the bottom of the screen. A player tries to click on the dots, and receives points when they are successful.
 
-![mockup](https://cdn.gomix.com/5637e272-75b8-4d60-af04-8b0adc1b8093%2Fscreening-mockup.png)
+![mockup](https://cdn.glitch.com/5637e272-75b8-4d60-af04-8b0adc1b8093%2Fdot-game-scoreboard.png)
 
 
 ## Guidelines for Completing the Exercise
@@ -23,7 +23,7 @@ The goal of this exercise is to create a game. In the game, dots move from the t
 - When the game starts, a new dot should appear on the playing area. 
 - Dots fall at a constant rate. A player should be able to use a slider to control the rate at which dots fall, with a range of 10-100 pixels per second.
 - New dots appear at a random horizontal position at the top of the box. A dot should not "hang" off the left or right edge of the screen. Dots should vary randomly in size from 10px in diameter to 100px in diameter.
-- When a player touches or clicks a dot, the dot should disappear from the box and a new dot should appear at the top of the page 1000ms later. 
+- When a player touches or clicks a dot, the dot should disappear from the box and a new dot should appear at the top of the page 1000ms later. The score should be incremented by a value inversely proportional to the size of the dot, with 10px dots worth 10 points, and 100px dots worth 1 point.
 - A new dot should also appear every 1000ms.
 
 You can view your running application by clicking the "Show" link in the upper left-hand corner of the page. 
