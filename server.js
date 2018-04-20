@@ -4,12 +4,6 @@
 // init project
 var express = require('express');
 var app = express();
-var sassMiddleware = require("node-sass-middleware");
-
-app.use(sassMiddleware({
-  src: __dirname + '/public',
-  dest: '/tmp'
-}));
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));

@@ -12,7 +12,7 @@ The goal of this exercise is to create a game. In the game, dots move from the t
 - You may look up anything you'd like.
 - You should not use a JavaScript library.
 - You must write at least the CSS necessary to achieve the basic layout of the game; you may also write additional CSS to improve the design of the game. 
-- The project is set up to use Sass, but you may also author plain CSS, or add a different CSS preprocessor.
+- The project is set up to use plain CSS, but you may add a CSS preprocessor if you'd like.
 - Your finished code should be of a quality that you would submit to your peers for a code review. 
 - If you have questions, respond to the original email where the exercise was shared with you; your questions will be answered within one business day. 
 - When you are ready to share your work, respond to the original email; please include a link to this page, _and the approximate amount of time you spent on the exercise_.
