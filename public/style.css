@@ -1,7 +1,11 @@
 :root {
-  --falling-speed: 10s;
+  --falling-speed: 1s;
   --dot-size: 100px;
   --initial-position: translateY(calc(-0.5 * var(--dot-size)));
+}
+
+body{
+  overflow: hidden;
 }
 
 .dot {
@@ -9,7 +13,7 @@
   height: var(--dot-size);
   border: 1px solid;
   border-radius: 50%;
-/*   animation: falling var(--falling-speed) linear; */
+  animation: falling var(--falling-speed) linear;
   transform: var(--initial-position);
   box-sizing: border-box;
 }
