@@ -1,19 +1,19 @@
 :root {
-  --falling-speed: 3s;
-  --dot-size: 100px;
+  --falling-speed: 10s;
+  --dot-size: 100;
 }
 
 .dot {
-  width: var(--dot-size);
-  height: var(--dot-size);
+  width: var(--dot-size)px;
+  height: var(--dot-size)px;
   border: 1px solid;
   border-radius: 50%;
-  animation: falling var(--falling-speed); linear;
-  transform: translateY(-50px);
+/*   animation: falling var(--falling-speed) linear; */
+  transform: translateY(-(var(--dot-size)));
 }
 @keyframes falling {
     from {
-        transform: translateY(0);
+        transform: translateY(-(var(--dot-size)));;
 }
 
     to {
