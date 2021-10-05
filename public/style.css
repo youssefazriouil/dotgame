@@ -1,6 +1,7 @@
 :root {
   --falling-speed: 10s;
   --dot-size: 100px;
+  --initial-position: translateY(calc(-0.5 * var(--dot-size)));
 }
 
 .dot {
@@ -9,11 +10,12 @@
   border: 1px solid;
   border-radius: 50%;
 /*   animation: falling var(--falling-speed) linear; */
-  transform: translateY(calc(var(--dot-size)));
+  transform: var(--initial-position);
+  box-sizing: border-box;
 }
 @keyframes falling {
     from {
-        transform: translateY(-(var(--dot-size)));;
+        transform: var(--initial-position);
 }
 
     to {
