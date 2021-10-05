@@ -5,7 +5,10 @@ const makeDot = () => {
 };
 
 const init = () => {
-  console.log('body',getElementsByTagName('body'))
+  const bodyTag = document.getElementsByTagName('body')[0]
+  const h1 = document.createElement('h1')
+  h1.append('Youssef')
+  bodyTag.appendChild(h1)
 }
 init()
 // document.on("load", console.log("blablabla"));
