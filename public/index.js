@@ -2,6 +2,7 @@ const makeDot = (node) => {
   const dot = document.createElement("div");
   dot.classList.add("dot")
   node.appendChild(dot)
+  
 };
 
 const init = () => {
