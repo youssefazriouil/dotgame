@@ -1,11 +1,12 @@
-const makeDot = () => {
-  document.body.appendChild(
-    document.createElement("div").classList.add("yous")
-  );
+const makeDot = (node) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot")
+  node.appendChild(dot)
 };
 
 const init = () => {
   const bodyTag = document.getElementsByTagName('body')[0]
+  makeDot(bodyTag)
   
 }
 init()

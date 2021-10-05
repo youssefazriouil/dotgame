@@ -1,7 +1,9 @@
 .dot {
   width: 16px;
+  height: 16px;
   border: 1px solid;
-  animation: falling;
+  border-radius: 50%;
+  animation: falling 1s linear;
 }
 @keyframes falling {
     from {
@@ -9,6 +11,6 @@
 }
 
     to {
-        transform : translateY(-100vh);
+        transform : translateY(100vh);
     }
 }
