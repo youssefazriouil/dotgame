@@ -6,8 +6,7 @@ const makeDot = (node) => {
 
 const init = () => {
   const bodyTag = document.getElementsByTagName('body')[0]
-  const dotInterval = setInterval()
-  makeDot(bodyTag)
+  // const dotInterval = setInterval(() => makeDot(bodyTag), 1000)
   
 }
 init()
