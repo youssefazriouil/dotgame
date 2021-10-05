@@ -4,5 +4,9 @@ const makeDot = () => {
   );
 };
 
+const init = () => {
+  console.log('body',getElementsByTagName('body'))
+}
+init()
 // document.on("load", console.log("blablabla"));
-console.log('kazkazkAZ')
+// console.log('kazkazkAZ')
