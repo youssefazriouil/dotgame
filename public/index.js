@@ -1,32 +1,32 @@
 import { isElementInViewport } from "./helpers.js";
 
-const makeDot = bodyEl => {
+const makeDot = mainEl => {
   const dot = document.createElement("div");
   dot.addEventListener('click', clickDot);
   dot.classList.add("dot");
-  bodyEl.appendChild(dot);
+  mainEl.appendChild(dot);
 };
 
 const clickDot = ({target: dotEl}) => {
   console.log('clicked', dotEl)
 }
 
-const cleanUpDots = bodyEl => {
-  const allDots = bodyEl.getElementsByClassName("dot")
+const cleanUpDots = mainEl => {
+  const allDots = mainEl.getElementsByClassName("dot")
   for(const dot of allDots) {
     !isElementInViewport(dot) && dot.remove()
   }
 };
 
-const handleTick = bodyEl => {
-  cleanUpDots(bodyEl);
-  makeDot(bodyEl);
+const handleTick = mainEl => {
+  cleanUpDots(mainEl);
+  makeDot(mainEl);
 };
 
 const init = () => {
   const score = 0;
-  const bodyEl = document.getElementsByTagName("body")[0];
+  const mainEl = document.getElementsByTagName("main")[0];
   
-  // const dotInterval = setInterval(() => handleTick(bodyEl), 1000)
+  const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 init();

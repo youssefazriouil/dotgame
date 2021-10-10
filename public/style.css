@@ -1,5 +1,5 @@
 :root {
-  --falling-speed: 1s;
+  --falling-speed: 10s;
   --dot-size: 100px;
   --initial-position: translateY(calc(-0.5 * var(--dot-size)));
 }
@@ -8,12 +8,20 @@ body{
   overflow: hidden;
 }
 
+header {
+  z-index: 1;
+}
+
+main {
+  overflow: hidden;
+}
+
 .dot {
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
   border-radius: 50%;
-  animation: falling var(--falling-speed) linear forwards;
+/*   animation: falling var(--falling-speed) linear forwards; */
   animation-iteration-count: 1;
   transform: var(--initial-position);
   box-sizing: border-box;
@@ -24,6 +32,6 @@ body{
 }
 
     to {
-        transform : translateY(100vh);
+        transform : translateY(1vh);
     }
 }
