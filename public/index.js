@@ -27,6 +27,6 @@ const init = () => {
   const score = 0;
   const mainEl = document.getElementsByTagName("main")[0];
   
-  const dotInterval = setInterval(() => handleTick(mainEl), 1000)
+  // const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 init();
