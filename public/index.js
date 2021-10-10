@@ -2,18 +2,17 @@ import { isElementInViewport } from "./helpers.js";
 
 const makeDot = node => {
   const dot = document.createElement("div");
-  dot.addEvenListener('')
+  dot.addEventListener('click', clickDot);
   dot.classList.add("dot");
   node.appendChild(dot);
 };
 
 const clickDot = dotEl => {
-  console.log('clicked')
+  console.log('clicked', dotEl)
 }
 
 const cleanUpDots = bodyEl => {
   const allDots = bodyEl.getElementsByClassName("dot")
-  console.log('allDots',allDots)
   for(const dot of allDots) {
     !isElementInViewport(dot) && dot.remove()
   }
