@@ -1,7 +1,8 @@
-import { isElementInViewport } from "./helpers.js";
+import { isElementInViewport, getRandomNumber } from "./helpers.js";
 
 const makeDot = mainEl => {
   const dot = document.createElement("div");
+  const size = getRandomNumber(1, 100);
   dot.addEventListener('click', clickDot);
   dot.classList.add("dot");
   mainEl.appendChild(dot);
