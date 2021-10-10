@@ -10,13 +10,15 @@ const cleanUpDots = bodyEl => {
   const allDots = bodyEl.getElementsByClassName("dot")
   console.log('allDots',allDots)
   for(const dot of allDots) {
-    isElementInViewport(dot) && dot.romve()
+    console.log('isElementInViewport',isElementInViewport(dot))
+    !isElementInViewport(dot) && dot.remove()
   }
 };
 
 const handleTick = bodyEl => {
-  makeDot(bodyEl);
   cleanUpDots(bodyEl);
+  makeDot(bodyEl);
+  
 };
 
 const init = () => {
