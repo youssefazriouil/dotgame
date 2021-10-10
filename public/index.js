@@ -26,8 +26,6 @@ const handleTick = bodyEl => {
 const init = () => {
   const score = 0;
   const bodyEl = document.getElementsByTagName("body")[0];
-  const headerEl = document.createElement('header');
-  bodyEl.prepend(headerEl)
   
   // const dotInterval = setInterval(() => handleTick(bodyEl), 1000)
 };
