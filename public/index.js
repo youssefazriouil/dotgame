@@ -9,8 +9,9 @@ const makeDot = () => {
   mainEl.appendChild(dot);
 };
 
-const updateScore = (score) => {
+const updateScore = (size) => {
   const scoreEl = document.getElementById('score');
+  const score = size/10
   scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
 }
 
