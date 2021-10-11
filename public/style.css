@@ -33,7 +33,6 @@ main {
 }
 
 .dot {
-  --offset-view-width: var(--offset-left)vw;
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
@@ -43,9 +42,9 @@ main {
 /*   transform: var(--initial-position); */
   box-sizing: border-box;
   position: absolute;
-  left: calc(var(--ofset-view-width));
+/*   left: calc(var(--offset-view-width)); */
 /*   left: calc(var(--ofset-view-width) - (var(--offset-left / 100)) * var(--dot-size)); */
-/*   left: calc(50vw); */
+  left: calc(40vw - 0.4 * var(--dot-size));
 /*   left: 0; */
 }
 @keyframes falling {

@@ -5,7 +5,8 @@ const makeDot = () => {
   const size = getRandomNumber(10, 100);
   const offsetLeft = getRandomNumber(0,100);
   dot.style.setProperty("--dot-size", size + "px");
-  dot.style.setProperty("--offset-left", offsetLeft);
+  dot.style.setProperty("--offset-view-width", offsetLeft+"vw");
+  // dot.style.setProperty("--offset-view-width", offsetLeft+"vw");
   dot.addEventListener("click", clickDot);
   dot.classList.add("dot");
   mainEl.appendChild(dot);
