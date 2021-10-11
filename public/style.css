@@ -37,8 +37,7 @@ main {
 /*   transform: var(--initial-position); */
   box-sizing: border-box;
   position: absolute;
-  position
-  left: calc(50vw - 0.5 * var(--dot-size));
+  left: calc(75vw - 0.5 * var(--dot-size));
 /*   left: calc(50vw); */
 /*   left: 0; */
 }
