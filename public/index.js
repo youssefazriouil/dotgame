@@ -3,6 +3,7 @@ import { isElementInViewport, getRandomNumber } from "./helpers.js";
 const makeDot = mainEl => {
   const dot = document.createElement("div");
   const size = getRandomNumber(1, 100);
+  dot.style.setProperty('--dot-size', size+'px');
   dot.addEventListener('click', clickDot);
   dot.classList.add("dot");
   mainEl.appendChild(dot);
@@ -28,6 +29,6 @@ const init = () => {
   const score = 0;
   const mainEl = document.getElementsByTagName("main")[0];
   
-  // const dotInterval = setInterval(() => handleTick(mainEl), 1000)
+  const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 init();

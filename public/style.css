@@ -1,7 +1,7 @@
 :root {
   --falling-speed: 10s;
-  --dot-size: 100px;
-  --initial-position: translateY(calc(-0.5 * var(--dot-size)));
+/*   --dot-size: 100px;
+  --initial-position: translateY(calc(-0.5 * var(--dot-size))); */
 }
 
 body{
@@ -17,24 +17,26 @@ header {
 
 main {
   overflow: hidden;
+  height: 100vh;
 }
 
 .dot {
+/*   --dot-size: 20px; */
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
   border-radius: 50%;
-/*   animation: falling var(--falling-speed) linear forwards; */
+  animation: falling var(--falling-speed) linear;
   animation-iteration-count: 1;
-  transform: var(--initial-position);
+/*   transform: var(--initial-position); */
   box-sizing: border-box;
 }
 @keyframes falling {
     from {
-        transform: var(--initial-position);
+        transform: translateY(0);
 }
 
     to {
-        transform : translateY(1vh);
+        transform : translateY(100vh);
     }
 }
