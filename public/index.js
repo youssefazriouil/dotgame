@@ -9,8 +9,14 @@ const makeDot = mainEl => {
   mainEl.appendChild(dot);
 };
 
+const updateScore = (score) => {
+  const scoreEl = document.getElementById('score');
+  scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
+}
+
 const clickDot = ({target: dotEl}) => {
-  const size = getComputedStyle(dotEl).width.replace('px', '')
+  const size = getComputedStyle(dotEl).width.replace('px', '');
+  updateScore(size);
 }
 
 const cleanUpDots = mainEl => {
