@@ -44,7 +44,7 @@ main {
   position: absolute;
 /*   left: calc(var(--offset-view-width)); */
 /*   left: calc(var(--ofset-view-width) - (var(--offset-left / 100)) * var(--dot-size)); */
-  left: calc(40vw - 0.4 * var(--dot-size));
+  left: calc(var(--offset-view-width) - var(--offset-ratio) * var(--dot-size));
 /*   left: 0; */
 }
 @keyframes falling {
