@@ -1,6 +1,6 @@
 import { isElementInViewport, getRandomNumber } from "./helpers.js";
 
-const makeDot = mainEl => {
+const makeDot = () => {
   const dot = document.createElement("div");
   const size = getRandomNumber(10, 100);
   dot.style.setProperty('--dot-size', size+'px');
@@ -17,24 +17,27 @@ const updateScore = (score) => {
 const clickDot = ({target: dotEl}) => {
   const size = getComputedStyle(dotEl).width.replace('px', '');
   updateScore(size);
+  dotEl.remove();
+  setTimeout(() => {makeDot, 100});
 }
 
-const cleanUpDots = mainEl => {
+const cleanUpDots = () => {
   const allDots = mainEl.getElementsByClassName("dot")
   for(const dot of allDots) {
     !isElementInViewport(dot) && dot.remove()
   }
 };
 
-const handleTick = mainEl => {
+const handleTick = () => {
   cleanUpDots(mainEl);
   makeDot(mainEl);
 };
 
 const init = () => {
   const score = 0;
-  const mainEl = document.getElementsByTagName("main")[0];
+  
 
   const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
+const mainEl = document.getElementsByTagName("main")[0];
 init();
