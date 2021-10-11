@@ -1,10 +1,8 @@
 :root {
   --falling-speed: 10s;
-/*   --dot-size: 100px;
-  --initial-position: translateY(calc(-0.5 * var(--dot-size))); */
 }
 
-body{
+body {
   overflow: hidden;
 }
 
@@ -14,17 +12,8 @@ header {
   z-index: 1;
   box-shadow: 0px 2px 2px #DEE5EC;
 }
-header span {
-  height: 10px;
-  border-right: 1px solid;
+header label {
   display: block;
-}
-header span.fifty {
-  width: 50%;
-}
-
-header span.sevenfive {
-  width: 75%;
 }
 
 main {
@@ -37,22 +26,19 @@ main {
   height: var(--dot-size);
   border: 1px solid;
   border-radius: 50%;
-/*   animation: falling var(--falling-speed) linear forwards; */
+  animation: falling var(--falling-speed) linear forwards;
   animation-iteration-count: 1;
-/*   transform: var(--initial-position); */
+
   box-sizing: border-box;
   position: absolute;
-/*   left: calc(var(--offset-view-width)); */
-/*   left: calc(var(--ofset-view-width) - (var(--offset-left / 100)) * var(--dot-size)); */
   left: calc(var(--offset-view-width) - var(--offset-ratio) * var(--dot-size));
-/*   left: 0; */
 }
 @keyframes falling {
-    from {
-        transform: translateY(0);
-}
+  from {
+    transform: translateY(0);
+  }
 
-    to {
-        transform : translateY(100vh);
-    }
+  to {
+    transform: translateY(100vh);
+  }
 }
