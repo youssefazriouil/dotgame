@@ -14,12 +14,17 @@ header {
   z-index: 1;
   box-shadow: 0px 2px 2px #DEE5EC;
 }
-
 header span {
-  width: 50%;
   height: 10px;
   border-right: 1px solid;
   display: block;
+}
+header span.fifty {
+  width: 50%;
+}
+
+header span.sevenfive {
+  width: 75%;
 }
 
 main {
@@ -28,6 +33,7 @@ main {
 }
 
 .dot {
+  --offset-view-width: var(--offset-left)vw;
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
@@ -37,7 +43,8 @@ main {
 /*   transform: var(--initial-position); */
   box-sizing: border-box;
   position: absolute;
-  left: calc(75vw - 0.5 * var(--dot-size));
+  left: calc(var(--ofset-view-width));
+/*   left: calc(var(--ofset-view-width) - (var(--offset-left / 100)) * var(--dot-size)); */
 /*   left: calc(50vw); */
 /*   left: 0; */
 }
