@@ -18,7 +18,7 @@ const clickDot = ({target: dotEl}) => {
   const size = getComputedStyle(dotEl).width.replace('px', '');
   updateScore(size);
   dotEl.remove();
-  setTimeout(() => {makeDot, 100});
+  setTimeout(() => {makeDot, 1000});
 }
 
 const cleanUpDots = () => {
