@@ -21,12 +21,12 @@ main {
 }
 
 .dot {
-/*   --dot-size: 20px; */
+  --dot-size: 20px;
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
   border-radius: 50%;
-  animation: falling var(--falling-speed) linear;
+/*   animation: falling var(--falling-speed) linear; */
   animation-iteration-count: 1;
 /*   transform: var(--initial-position); */
   box-sizing: border-box;
