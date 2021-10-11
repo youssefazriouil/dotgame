@@ -10,7 +10,7 @@ const makeDot = mainEl => {
 };
 
 const clickDot = ({target: dotEl}) => {
-  console.log('clicked', dotEl)
+  const size = getComputedStyle(dotEl).width.replace('px', '')
 }
 
 const cleanUpDots = mainEl => {
@@ -28,9 +28,7 @@ const handleTick = mainEl => {
 const init = () => {
   const score = 0;
   const mainEl = document.getElementsByTagName("main")[0];
-  // makeDot(mainEl);
-  // makeDot(mainEl);
-  // makeDot(mainEl);
-  // const dotInterval = setInterval(() => handleTick(mainEl), 1000)
+
+  const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 init();

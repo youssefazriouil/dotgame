@@ -21,7 +21,6 @@ main {
 }
 
 .dot {
-  --dot-size: 20px;
   width: var(--dot-size);
   height: var(--dot-size);
   border: 1px solid;
@@ -31,6 +30,7 @@ main {
 /*   transform: var(--initial-position); */
   box-sizing: border-box;
   position: absolute;
+  left: calc(100vw - var(--dot-size));
 }
 @keyframes falling {
     from {
