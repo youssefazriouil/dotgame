@@ -45,4 +45,5 @@ const init = () => {
   const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 const mainEl = document.getElementsByTagName("main")[0];
+console.log(mainEl.clientHeight)
 init();
