@@ -51,4 +51,4 @@ const mainEl = document.getElementsByTagName("main")[0];
 init();
 
 // anim-dur = px/s * total-length
-// px/s = anim-dur / total-length
+// px/s = total-length / anim-dur
