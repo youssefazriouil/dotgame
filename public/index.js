@@ -16,7 +16,7 @@ const makeDot = () => {
 const updateScore = size => {
   const scoreEl = document.getElementById("score");
   // Transform score by subtracting the size divided by 10 from 11
-  // such that size 100 -> 1, 50 -> 
+  // such that size 100 -> 1, size 50 -> 6, size 10 -> 10
   const score = 11 - (Math.floor(size / 10));
   scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
 };
@@ -53,18 +53,11 @@ const handleTick = () => {
 };
 
 const init = () => {
-  // makeDot()
-  const windowHeight = mainEl.clientHeight;
-  // const animationDuration = 10;
-  
   speedSliderEl.addEventListener('change', updateFallingSpeed);
-  // console.log(windowHeight / animationDuration);
-  const dotInterval = setInterval(() => handleTick(mainEl), 1000);
-  
+  const dotInterval = setInterval(() => handleTick(mainEl), 1000);  
 };
 const mainEl = document.getElementsByTagName("main")[0];
 const speedSliderEl = document.getElementById('speedSlider')
+
 init();
 
-// anim-dur = total-length / px/s
-// px/s = total-length / anim-dur
