@@ -40,10 +40,12 @@ const handleTick = () => {
 };
 
 const init = () => {
-  const score = 0;
   // makeDot()
+  const windowHeight = mainEl.clientHeight
   const dotInterval = setInterval(() => handleTick(mainEl), 1000)
 };
 const mainEl = document.getElementsByTagName("main")[0];
 console.log(mainEl.clientHeight)
 init();
+
+anim-dur = px/s * 
