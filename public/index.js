@@ -41,11 +41,14 @@ const handleTick = () => {
 
 const init = () => {
   // makeDot()
-  const windowHeight = mainEl.clientHeight
-  const dotInterval = setInterval(() => handleTick(mainEl), 1000)
+  const windowHeight = mainEl.clientHeight;
+  const animationDuration = 10;
+  console.log(windowHeight / animationDuration);
+  // const dotInterval = setInterval(() => handleTick(mainEl), 1000);
+  
 };
 const mainEl = document.getElementsByTagName("main")[0];
-console.log(mainEl.clientHeight)
 init();
 
-anim-dur = px/s * 
+// anim-dur = px/s * total-length
+// px/s = anim-dur / total-length
