@@ -18,6 +18,10 @@ const updateScore = size => {
   scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
 };
 
+const updateFallingSpeed = ({target: {value}}) => {
+  console.log(value)
+}
+
 const clickDot = ({ target: dotEl }) => {
   const size = getComputedStyle(dotEl).width.replace("px", "");
   updateScore(size);
@@ -42,8 +46,10 @@ const handleTick = () => {
 const init = () => {
   // makeDot()
   const windowHeight = mainEl.clientHeight;
-  const animationDuration = 10;
-  console.log(windowHeight / animationDuration);
+  // const animationDuration = 10;
+  const speedSliderEl = document.getElementById('speedSlider')
+  speedSliderEl.addEventListener('change', updateFallingSpeed);
+  // console.log(windowHeight / animationDuration);
   // const dotInterval = setInterval(() => handleTick(mainEl), 1000);
   
 };
