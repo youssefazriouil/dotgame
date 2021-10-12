@@ -7,7 +7,7 @@ const makeDot = () => {
   dot.style.setProperty("--dot-size", size + "px");
   dot.style.setProperty("--offset-view-width", offsetLeft+"vw");
   dot.style.setProperty("--offset-ratio", (offsetLeft/100));
-  dot.style.setProperty("--falling-speed", speedSliderEl.value);
+  dot.style.setProperty("--falling-speed", getFallingSpeed() + 's');
   dot.addEventListener("click", clickDot);
   dot.classList.add("dot");
   mainEl.appendChild(dot);
@@ -19,11 +19,13 @@ const updateScore = size => {
   scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
 };
 
+const getFallingSpeed = () => mainEl.clientHeight / speedSliderEl.value;
+
 const updateFallingSpeed = ({target: {value}}) => {
   document.getElementById('currentSpeed').textContent = value;
   const allDots = mainEl.getElementsByClassName('dot');
   for (const dot of allDots) {
-    dot.style.setProperty("--falling-speed", speedSliderEl.value);
+    dot.style.setProperty("--falling-speed", getFallingSpeed() + 's');
   }
 }
 
@@ -55,12 +57,12 @@ const init = () => {
   
   speedSliderEl.addEventListener('change', updateFallingSpeed);
   // console.log(windowHeight / animationDuration);
-  // const dotInterval = setInterval(() => handleTick(mainEl), 1000);
+  const dotInterval = setInterval(() => handleTick(mainEl), 1000);
   
 };
 const mainEl = document.getElementsByTagName("main")[0];
 const speedSliderEl = document.getElementById('speedSlider')
 init();
 
-// anim-dur = px/s * total-length
+// anim-dur = total-length / px/s
 // px/s = total-length / anim-dur
