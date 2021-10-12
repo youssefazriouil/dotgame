@@ -15,6 +15,8 @@ const makeDot = () => {
 
 const updateScore = size => {
   const scoreEl = document.getElementById("score");
+  // Transform score by subtracting the size divided by 10 from 11
+  // such that size 100 -> 1, 50 -> 
   const score = 11 - (Math.floor(size / 10));
   scoreEl.textContent = parseInt(scoreEl.textContent) + parseInt(score);
 };

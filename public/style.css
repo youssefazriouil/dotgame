@@ -26,7 +26,6 @@ main {
   border-radius: 50%;
   animation: falling var(--falling-speed) linear forwards;
   animation-iteration-count: 1;
-
   box-sizing: border-box;
   position: absolute;
   left: calc(var(--offset-view-width) - var(--offset-ratio) * var(--dot-size));
