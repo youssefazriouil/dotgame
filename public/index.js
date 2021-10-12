@@ -19,6 +19,7 @@ const updateScore = size => {
 };
 
 const updateFallingSpeed = ({target: {value}}) => {
+  document.getElementById('currentSpeed').textContent = value;
   console.log(value)
 }
 
@@ -47,13 +48,15 @@ const init = () => {
   // makeDot()
   const windowHeight = mainEl.clientHeight;
   // const animationDuration = 10;
-  const speedSliderEl = document.getElementById('speedSlider')
+  
   speedSliderEl.addEventListener('change', updateFallingSpeed);
   // console.log(windowHeight / animationDuration);
   // const dotInterval = setInterval(() => handleTick(mainEl), 1000);
   
 };
 const mainEl = document.getElementsByTagName("main")[0];
+const speedSliderEl = document.getElementById('speedSlider')
+let fallingSpeed = speedSliderEl.value;
 init();
 
 // anim-dur = px/s * total-length
