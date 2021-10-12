@@ -7,6 +7,7 @@ const makeDot = () => {
   dot.style.setProperty("--dot-size", size + "px");
   dot.style.setProperty("--offset-view-width", offsetLeft+"vw");
   dot.style.setProperty("--offset-ratio", (offsetLeft/100));
+  dot.style.setProperty("--falling-speed", speedSliderEl.value);
   dot.addEventListener("click", clickDot);
   dot.classList.add("dot");
   mainEl.appendChild(dot);
@@ -20,7 +21,10 @@ const updateScore = size => {
 
 const updateFallingSpeed = ({target: {value}}) => {
   document.getElementById('currentSpeed').textContent = value;
-  console.log(value)
+  const allDots = mainEl.getElementsByClassName('dot');
+  for (const dot of allDots) {
+    dot.style.setProperty("--falling-speed", speedSliderEl.value);
+  }
 }
 
 const clickDot = ({ target: dotEl }) => {
@@ -56,7 +60,6 @@ const init = () => {
 };
 const mainEl = document.getElementsByTagName("main")[0];
 const speedSliderEl = document.getElementById('speedSlider')
-let fallingSpeed = speedSliderEl.value;
 init();
 
 // anim-dur = px/s * total-length
